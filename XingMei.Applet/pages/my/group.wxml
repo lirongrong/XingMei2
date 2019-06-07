@@ -1,0 +1,40 @@
+<import src="../../wxParse/wxParse.wxml" />
+<view class='group'>
+  <view class='group_hint' bindtap='tapOpen'> 如何获取团队
+    <image style='width:20rpx;height:20rpx;' src="/images/botton_more_red@3x.png"></image>
+  </view>
+  <view class='group_content' >
+   <view wx:for="{{list}}" wx:key="key" class="{{list.length>0 ? 'show':'hidden'}}">
+      <view class='group_contentList' id="{{item.id}}" bindtap='tapGroup' data-childrenCount='{{item.childrenCount}}' >
+        <view class='contentList_img'>
+          <image src='{{item.image}}'></image>
+        </view>
+        <view class='contentList_name'>{{item.name}}</view>
+        <view>
+          <view class="{{item.childrenCount == 0 ? 'hidden':'show'}}">
+            <view class="contentList_set">
+              <image src='{{item.image}}' wx:for="{{item.children}}" wx:key="key"></image>
+              <text class='contentList_setText' hidden='{{item.childrenCount <= 6}}'>{{item.childrenCount}}</text>
+            </view>
+          </view>
+          <view class="{{item.childrenCount == 0 ? 'show':'hidden'}}">
+          <view class='no_text'> Ta当前还没有团队哦</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="group_no {{list.length==0 ? 'show':'hidden'}}">当前没有团队</view>
+    <!-- 弹出框 -->
+  <view class='mask' hidden="{{nullhits}}" catchtouchmove='ture'>
+    <view class="myBouns">
+      <view class="myBouns_title">{{teamTitle}}</view>
+      <view class='myBouns_contcen'>
+        <scroll-view scroll-y="true" style="height:360rpx;">
+          <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+        </scroll-view>
+      </view>
+      <view class='myBouns_btn' bindtap='tapClose'>知道了</view>
+    </view>
+  </view>
+</view>

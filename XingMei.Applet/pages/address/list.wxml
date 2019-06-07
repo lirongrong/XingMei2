@@ -1,0 +1,30 @@
+<view class='shippingAddress'>
+  <view class="{{addressList.length >0 ? 'show':'hidden'}}">
+    <block wx:for="{{addressList}}" wx:key="key">
+      <view class='shippingAddress_list' bindtap="addressChoose" data-id="{{index}}">
+        <view class='shippingAddress_listLeft'>
+        <view class="default {{item.isDefault == true ? 'show':'hidden'}}" >默认</view>
+          <view class='listLeft_top'>
+            <text class='listLeft_topNmae'>{{item.name}}</text>
+            <text class='listLeft_topPhone'>{{item.mobile}}</text>
+          </view>
+          <text class='listLeft_address'>{{item.province + ' ' + item.city + ' ' + item.area + ' ' + item.address}}</text>
+        </view>
+        <view class='shippingAddress_listRight' bindtap='tapEdit' data-id='{{item.id}}'>
+          <view class='listRigh_img'>
+            <image style='' src='/images/compile.png'></image>
+          </view>
+          <text class='listRight_text'>编辑</text>
+        </view>
+      </view>
+    </block>
+  </view>
+  <view class="{{addressList.length == 0 ? 'show':'hidden'}}">
+    <view class='shippingAddress_hollow'>当前没有收获地址</view>
+  </view>
+
+  <view class='shippingadd_btn' bindtap="tapAdd">
+    <text class='shippingadd_btnadd'>+</text>
+    <text>新增地址</text>
+  </view>
+</view>

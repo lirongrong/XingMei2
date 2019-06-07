@@ -1,0 +1,281 @@
+/* pages/bonus/bonus.wxss */
+
+page {
+  background-color: #f8f8f8;
+}
+
+.show {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+.bonus_top {
+  width: 94%;
+  height: 335rpx;
+  margin: 20rpx 3%;
+  border-radius: 8rpx;
+  position: relative;
+}
+
+.bonus_topconcten {
+  position: absolute;
+  top: 75rpx;
+}
+
+.bonus_topTitle {
+  width: 630rpx;
+  margin: 0rpx auto;
+  display: flex;
+}
+
+.topTitle_content {
+  font-size: 24rpx;
+  min-width: 75rpx;
+  height: 50rpx;
+  text-align: center;
+  line-height: 50rpx;
+  background: #fff;
+  border-radius: 30rpx;
+  padding: 0rpx 15rpx;
+  margin-left: 75rpx;
+}
+
+.topTitle_contentlast {
+  font-size: 24rpx;
+  min-width: 75rpx;
+  height: 50rpx;
+  text-align: center;
+  line-height: 50rpx;
+  border-radius: 30rpx;
+  padding: 0rpx 15rpx;
+  margin-left: 75rpx;
+}
+
+.bonus_topList {
+  width: 630rpx;
+  margin: 0rpx auto;
+  display: flex;
+  margin-top: 30rpx;
+  margin-left: 45rpx;
+}
+
+.topList_content {
+  font-size: 20rpx;
+  font-weight: bold;
+  width: 236rpx;
+  height: 26rpx;
+  text-align: center;
+}
+
+.topList_content:first-child:after {
+  font-size: 20rpx;
+  height: 25rpx;
+  float: right;
+  color: #c793ca;
+  content: "|";
+  margin-top: 10rpx;
+}
+
+.topList_content:nth-child(2):after {
+  font-size: 20rpx;
+  height: 25rpx;
+  float: right;
+  color: #c793ca;
+  content: "|";
+  margin-top: 10rpx;
+}
+
+.topList_content text {
+  font-weight: bold;
+  font-size: 36rpx;
+}
+
+.bonus_topHow {
+  font-size: 22rpx;
+  color: red;
+  text-align: center;
+  margin-top: 72rpx;
+}
+
+.bonus_button {
+  width: 642rpx;
+  height: 82rpx;
+  margin: 0rpx auto;
+  margin-top: 90rpx;
+  background: #d288c3;
+  color: #fff;
+  text-align: center;
+  line-height: 82rpx;
+  font-size: 30rpx;
+  border-radius: 8rpx;
+}
+
+.nothave_btn {
+  width: 530rpx;
+  height: 96rpx;
+  background: #7c7c7c;
+  border-radius: 10rpx;
+  margin: 0rpx auto;
+  margin-top: 52rpx;
+  color: #fff;
+  font-size: 26rpx;
+  text-align: center;
+  line-height: 96rpx;
+ 
+  
+}
+
+/* 弹出框 */
+
+.mask {
+  width:100%;
+  height:100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+
+.myToast {
+  position: fixed;
+  top: 320rpx;
+  left: 78rpx;
+  width: 594rpx;
+  height: 502rpx;
+  border-radius: 20rpx;
+  background: #fff;
+  z-index: 100;
+}
+
+.myToast_clones {
+  font-size: 32rpx;
+  color: #bbb;
+  float: right;
+  margin-top: 25rpx;
+  margin-right: 25rpx;
+}
+
+.myToast_title {
+  display: block;
+  font-size: 36rpx;
+  color: #d288c3;
+  margin-top: 90rpx;
+  margin-bottom: 40rpx;
+  text-align: center;
+}
+
+.myToast_content {
+  font-size: 28rpx;
+  color: #555;
+  width: 410rpx;
+  margin: 0rpx auto;
+}
+
+.myToast_hint {
+  font-size: 26rpx;
+  text-align: center;
+  color: #8e8e8e;
+  padding-left: 8rpx;
+  margin-top: 23rpx;
+}
+
+.myToast_btn {
+  width: 280rpx;
+  height: 75rpx;
+  background: #acacac;
+  margin-top: 32rpx;
+  color: #fff;
+  font-size: 32rpx;
+  border-radius: 8rpx;
+}
+
+
+.myBouns{
+  position: fixed;
+  top: 320rpx;
+  left: 78rpx;
+  width: 594rpx;
+  height: 618rpx;
+  border-radius: 20rpx;
+  background: #fff;
+  z-index: 100;
+  font-size: 28rpx;
+}
+.myBouns_btn{
+  width:100%;
+  position: absolute;
+  bottom:0rpx;
+  left:0rpx;
+  border-top:1px solid #f3f3f3;
+  height:90rpx;
+  text-align: center;
+  line-height: 90rpx;
+  color:#d288c3;
+  border-bottom-right-radius:20rpx;
+border-bottom-left-radius:20rpx;
+font-size: 32rpx;
+}
+.myBouns_title{
+  width:100%;
+  text-align: center;
+  margin-top:60rpx;
+  margin-bottom:40rpx;
+  font-size: 32rpx;
+}
+.myBouns_contcen{
+  width:90%;
+  margin-left:5%;
+  height:360rpx;
+  font-size: 26rpx;
+  text-align: center;
+}
+.myBouns_contcenList{
+  height:32rpx;
+  margin-top:25rpx;
+}
+.myBouns_contcenList:first-child{
+  margin-top:0rpx;
+}
+.myBouns_accumuList{
+  width:100%;
+  height:100rpx;
+  border-bottom:1rpx solid #f3f3f3;
+}
+
+.accumuList_img{
+  float: left;
+  width:60rpx;
+  height:60rpx;
+  border-radius: 50%;
+}
+.accumuList_img image{
+  width:100%;
+  height:100%;
+}
+.accumuList_left{
+  float: left;
+  text-align: left;
+  margin-left:20rpx;
+}
+.accumuList_title{
+  font-size: 26rpx;
+}
+.accumuList_time{
+  color:#a8a8a8;
+  font-size: 18rpx;
+  margin-top:10rpx;
+}
+.accumuList_num{
+  float: right;
+  margin-right:30rpx;
+  font-size: 26rpx;
+  color:red;
+  font-weight: bold;
+  margin-top:10rpx;
+}

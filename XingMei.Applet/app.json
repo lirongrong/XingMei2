@@ -1,0 +1,53 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/product/list",
+        "pages/index/login",
+        "pages/product/detail",
+        "pages/index/share",
+        "pages/address/list",
+        "pages/address/edit",
+        "pages/order/list",
+        "pages/order/detail",
+        "pages/order/pay",
+        "pages/my/index",
+        "pages/my/money",
+        "pages/my/gift",
+        "pages/my/group",
+        "pages/my/groupChild",
+        "pages/my/fans"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "第二肌面膜旗舰店",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "color": "#888888",
+        "selectedColor": "#d288c3",
+        "borderStyle": "white",
+        "backgroundColor": "#fafafa",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "iconPath": "images/icon/icon_homes.png",
+                "selectedIconPath": "images/icon/icon_home_HLs.png",
+                "text": "首页"
+            },
+            {
+                "pagePath": "pages/product/list",
+                "iconPath": "images/icon/icon_02.png",
+                "selectedIconPath": "images/icon/icon_02_active.png",
+                "text": "第2肌"
+            },
+            {
+                "pagePath": "pages/my/index",
+                "iconPath": "images/icon/icon_mines.png",
+                "selectedIconPath": "images/icon/icon_mine_HLs.png",
+                "text": "我"
+            }
+        ]
+    },
+    "sitemapLocation": "sitemap.json"
+}

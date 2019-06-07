@@ -1,0 +1,308 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2CF53702-2A99-4FBC-91D1-96C268E0CF7A}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>XingMei.Applet</RootNamespace>
+    <AssemblyName>XingMei.Applet</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="app.js" />
+    <Content Include="images\bg_share.png" />
+    <Content Include="images\icon_address_center.png" />
+    <Content Include="images\icon_fans_center.png" />
+    <Content Include="images\icon_group_center.png" />
+    <Content Include="images\icon_qrcode_center.png" />
+    <Content Include="images\pic-bg%403x.png" />
+    <Content Include="images\pic_qian_bg%403x.png" />
+    <Content Include="pages\index\login.js" />
+    <Content Include="pages\my\fans.js" />
+    <Content Include="pages\product\list.js" />
+    <Content Include="utils\api.js" />
+    <Content Include="component\tabbarComponent\icon\icon_home.png" />
+    <Content Include="component\tabbarComponent\icon\icon_homes.png" />
+    <Content Include="component\tabbarComponent\icon\icon_home_HL.png" />
+    <Content Include="component\tabbarComponent\icon\icon_home_HLs.png" />
+    <Content Include="component\tabbarComponent\icon\icon_mine.png" />
+    <Content Include="component\tabbarComponent\icon\icon_mines.png" />
+    <Content Include="component\tabbarComponent\icon\icon_mine_HL.png" />
+    <Content Include="component\tabbarComponent\icon\icon_mine_HLs.png" />
+    <Content Include="component\tabbarComponent\icon\icon_release.png" />
+    <Content Include="component\tabbarComponent\icon\icon_releases.png" />
+    <Content Include="component\tabbarComponent\tabbar.js" />
+    <Content Include="images\Botton_address_top_right.png" />
+    <Content Include="images\Botton_Customer service%403x.png" />
+    <Content Include="images\Botton_more%403x.png" />
+    <Content Include="images\botton_more_Center.png" />
+    <Content Include="images\center_bg_top.png" />
+    <Content Include="images\icon_1_center.png" />
+    <Content Include="images\icon_2_center.png" />
+    <Content Include="images\icon_3_center.png" />
+    <Content Include="images\icon_4_center.png" />
+    <Content Include="images\icon_Bonus%403x.png" />
+    <Content Include="images\icon_bonus_center.png" />
+    <Content Include="images\icon_mask%403x.png" />
+    <Content Include="images\icon_mask_center.png" />
+    <Content Include="images\icon_share%403x.png" />
+    <Content Include="images\icon_share_center.png" />
+    <Content Include="images\progressBar_bg%403x.png" />
+    <Content Include="images\progressBar_line%403x.png" />
+    <Content Include="images\round_bg%403x.png" />
+    <Content Include="images\round_right%403x.png" />
+    <Content Include="images\smiling.png" />
+    <Content Include="images\Tabbar_center_h%403x.png" />
+    <Content Include="images\Tabbar_center_n%403x.png" />
+    <Content Include="images\Tabbar_home_h%403x.png" />
+    <Content Include="images\Tabbar_home_n%403x.png" />
+    <Content Include="images\Tabbar_Sign in%403x.png" />
+    <Content Include="images\weixin.png" />
+    <Content Include="pages\address\list.js" />
+    <Content Include="pages\address\edit.js" />
+    <Content Include="pages\my\money.js" />
+    <Content Include="pages\order\detail.js" />
+    <Content Include="pages\order\pay.js" />
+    <Content Include="pages\my\groupChild.js" />
+    <Content Include="pages\my\group.js" />
+    <Content Include="pages\index\index.js" />
+    <Content Include="pages\my\index.js" />
+    <Content Include="pages\my\gift.js" />
+    <Content Include="pages\order\list.js" />
+    <Content Include="pages\product\detail.js" />
+    <Content Include="pages\index\share.js" />
+    <None Include="pages\my\fans.json" />
+    <None Include="pages\my\fans.wxml" />
+    <None Include="pages\my\fans.wxss" />
+    <None Include="utils\biz.js" />
+    <None Include="README.md" />
+    <None Include="wxParse\wxParse.js" />
+    <None Include="wxParse\wxDiscode.js" />
+    <None Include="wxParse\showdown.js" />
+    <None Include="wxParse\htmlparser.js" />
+    <None Include="wxParse\html2json.js" />
+    <None Include="wxParse\emojis\99.gif" />
+    <None Include="wxParse\emojis\98.gif" />
+    <None Include="wxParse\emojis\97.gif" />
+    <None Include="wxParse\emojis\96.gif" />
+    <None Include="wxParse\emojis\95.gif" />
+    <None Include="wxParse\emojis\94.gif" />
+    <None Include="wxParse\emojis\93.gif" />
+    <None Include="wxParse\emojis\92.gif" />
+    <None Include="wxParse\emojis\91.gif" />
+    <None Include="wxParse\emojis\90.gif" />
+    <None Include="wxParse\emojis\89.gif" />
+    <None Include="wxParse\emojis\88.gif" />
+    <None Include="wxParse\emojis\87.gif" />
+    <None Include="wxParse\emojis\86.gif" />
+    <None Include="wxParse\emojis\85.gif" />
+    <None Include="wxParse\emojis\84.gif" />
+    <None Include="wxParse\emojis\83.gif" />
+    <None Include="wxParse\emojis\82.gif" />
+    <None Include="wxParse\emojis\81.gif" />
+    <None Include="wxParse\emojis\80.gif" />
+    <None Include="wxParse\emojis\79.gif" />
+    <None Include="wxParse\emojis\78.gif" />
+    <None Include="wxParse\emojis\77.gif" />
+    <None Include="wxParse\emojis\76.gif" />
+    <None Include="wxParse\emojis\75.gif" />
+    <None Include="wxParse\emojis\74.gif" />
+    <None Include="wxParse\emojis\73.gif" />
+    <None Include="wxParse\emojis\72.gif" />
+    <None Include="wxParse\emojis\71.gif" />
+    <None Include="wxParse\emojis\70.gif" />
+    <None Include="wxParse\emojis\69.gif" />
+    <None Include="wxParse\emojis\68.gif" />
+    <None Include="wxParse\emojis\67.gif" />
+    <None Include="wxParse\emojis\66.gif" />
+    <None Include="wxParse\emojis\65.gif" />
+    <None Include="wxParse\emojis\64.gif" />
+    <None Include="wxParse\emojis\63.gif" />
+    <None Include="wxParse\emojis\62.gif" />
+    <None Include="wxParse\emojis\61.gif" />
+    <None Include="wxParse\emojis\60.gif" />
+    <None Include="wxParse\emojis\59.gif" />
+    <None Include="wxParse\emojis\58.gif" />
+    <None Include="wxParse\emojis\57.gif" />
+    <None Include="wxParse\emojis\56.gif" />
+    <None Include="wxParse\emojis\55.gif" />
+    <None Include="wxParse\emojis\54.gif" />
+    <None Include="wxParse\emojis\53.gif" />
+    <None Include="wxParse\emojis\52.gif" />
+    <None Include="wxParse\emojis\51.gif" />
+    <None Include="wxParse\emojis\50.gif" />
+    <None Include="wxParse\emojis\49.gif" />
+    <None Include="wxParse\emojis\48.gif" />
+    <None Include="wxParse\emojis\47.gif" />
+    <None Include="wxParse\emojis\46.gif" />
+    <None Include="wxParse\emojis\45.gif" />
+    <None Include="wxParse\emojis\44.gif" />
+    <None Include="wxParse\emojis\43.gif" />
+    <None Include="wxParse\emojis\42.gif" />
+    <None Include="wxParse\emojis\41.gif" />
+    <None Include="wxParse\emojis\40.gif" />
+    <None Include="wxParse\emojis\39.gif" />
+    <None Include="wxParse\emojis\38.gif" />
+    <None Include="wxParse\emojis\37.gif" />
+    <None Include="wxParse\emojis\36.gif" />
+    <None Include="wxParse\emojis\35.gif" />
+    <None Include="wxParse\emojis\34.gif" />
+    <None Include="wxParse\emojis\33.gif" />
+    <None Include="wxParse\emojis\32.gif" />
+    <None Include="wxParse\emojis\31.gif" />
+    <None Include="wxParse\emojis\30.gif" />
+    <None Include="wxParse\emojis\29.gif" />
+    <None Include="wxParse\emojis\28.gif" />
+    <None Include="wxParse\emojis\27.gif" />
+    <None Include="wxParse\emojis\26.gif" />
+    <None Include="wxParse\emojis\25.gif" />
+    <None Include="wxParse\emojis\24.gif" />
+    <None Include="wxParse\emojis\23.gif" />
+    <None Include="wxParse\emojis\22.gif" />
+    <None Include="wxParse\emojis\21.gif" />
+    <None Include="wxParse\emojis\20.gif" />
+    <None Include="wxParse\emojis\19.gif" />
+    <None Include="wxParse\emojis\18.gif" />
+    <None Include="wxParse\emojis\17.gif" />
+    <None Include="wxParse\emojis\16.gif" />
+    <None Include="wxParse\emojis\15.gif" />
+    <None Include="wxParse\emojis\14.gif" />
+    <None Include="wxParse\emojis\134.gif" />
+    <None Include="wxParse\emojis\133.gif" />
+    <None Include="wxParse\emojis\132.gif" />
+    <None Include="wxParse\emojis\131.gif" />
+    <None Include="wxParse\emojis\130.gif" />
+    <None Include="wxParse\emojis\13.gif" />
+    <None Include="wxParse\emojis\129.gif" />
+    <None Include="wxParse\emojis\128.gif" />
+    <None Include="wxParse\emojis\127.gif" />
+    <None Include="wxParse\emojis\126.gif" />
+    <None Include="wxParse\emojis\125.gif" />
+    <None Include="wxParse\emojis\124.gif" />
+    <None Include="wxParse\emojis\123.gif" />
+    <None Include="wxParse\emojis\122.gif" />
+    <None Include="wxParse\emojis\121.gif" />
+    <None Include="wxParse\emojis\120.gif" />
+    <None Include="wxParse\emojis\12.gif" />
+    <None Include="wxParse\emojis\119.gif" />
+    <None Include="wxParse\emojis\118.gif" />
+    <None Include="wxParse\emojis\117.gif" />
+    <None Include="wxParse\emojis\116.gif" />
+    <None Include="wxParse\emojis\115.gif" />
+    <None Include="wxParse\emojis\114.gif" />
+    <None Include="wxParse\emojis\113.gif" />
+    <None Include="wxParse\emojis\112.gif" />
+    <None Include="wxParse\emojis\111.gif" />
+    <None Include="wxParse\emojis\110.gif" />
+    <None Include="wxParse\emojis\11.gif" />
+    <None Include="wxParse\emojis\109.gif" />
+    <None Include="wxParse\emojis\108.gif" />
+    <None Include="wxParse\emojis\107.gif" />
+    <None Include="wxParse\emojis\106.gif" />
+    <None Include="wxParse\emojis\105.gif" />
+    <None Include="wxParse\emojis\104.gif" />
+    <None Include="wxParse\emojis\103.gif" />
+    <None Include="wxParse\emojis\102.gif" />
+    <None Include="wxParse\emojis\101.gif" />
+    <None Include="wxParse\emojis\100.gif" />
+    <None Include="wxParse\emojis\10.gif" />
+    <None Include="wxParse\emojis\09.gif" />
+    <None Include="wxParse\emojis\08.gif" />
+    <None Include="wxParse\emojis\07.gif" />
+    <None Include="wxParse\emojis\06.gif" />
+    <None Include="wxParse\emojis\05.gif" />
+    <None Include="wxParse\emojis\04.gif" />
+    <None Include="wxParse\emojis\03.gif" />
+    <None Include="wxParse\emojis\02.gif" />
+    <None Include="wxParse\emojis\01.gif" />
+    <None Include="wxParse\emojis\00.gif" />
+    <None Include="component\tabbarComponent\tabbar.json" />
+    <None Include="component\tabbarComponent\tabbar.wxml" />
+    <None Include="component\tabbarComponent\tabbar.wxss" />
+    <None Include="pages\address\list.json" />
+    <None Include="pages\address\list.wxml" />
+    <None Include="pages\address\list.wxss" />
+    <None Include="pages\index\login.json" />
+    <None Include="pages\index\login.wxml" />
+    <None Include="pages\index\login.wxss" />
+    <None Include="pages\my\money.json" />
+    <None Include="pages\my\money.wxml" />
+    <None Include="pages\my\money.wxss" />
+    <None Include="pages\order\detail.json" />
+    <None Include="pages\order\detail.wxml" />
+    <None Include="pages\order\detail.wxss" />
+    <None Include="pages\order\pay.json" />
+    <None Include="pages\order\pay.wxml" />
+    <None Include="pages\order\pay.wxss" />
+    <None Include="pages\my\groupChild.json" />
+    <None Include="pages\my\groupChild.wxml" />
+    <None Include="pages\my\groupChild.wxss" />
+    <None Include="pages\my\group.json" />
+    <None Include="pages\my\group.wxml" />
+    <None Include="pages\my\group.wxss" />
+    <None Include="pages\my\gift.json" />
+    <None Include="pages\my\gift.wxml" />
+    <None Include="pages\my\gift.wxss" />
+    <None Include="pages\product\detail.json" />
+    <None Include="pages\product\detail.wxml" />
+    <None Include="pages\product\detail.wxss" />
+    <None Include="pages\index\share.json" />
+    <None Include="pages\index\share.wxml" />
+    <None Include="pages\index\share.wxss" />
+    <None Include="pages\product\list.json" />
+    <None Include="pages\product\list.wxml" />
+    <None Include="pages\product\list.wxss" />
+    <None Include="utils\validate.js" />
+    <None Include="utils\underscore.js" />
+    <None Include="utils\security.js" />
+    <None Include="config.js" />
+    <None Include="utils\util.js" />
+    <None Include="wxParse\wxParse.wxml" />
+    <None Include="wxParse\wxParse.wxss" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.json" />
+    <None Include="app.wxss" />
+    <None Include="pages\address\edit.json" />
+    <None Include="pages\address\edit.wxml" />
+    <None Include="pages\address\edit.wxss" />
+    <None Include="pages\index\index.json" />
+    <None Include="pages\index\index.wxml" />
+    <None Include="pages\index\index.wxss" />
+    <None Include="pages\my\index.json" />
+    <None Include="pages\my\index.wxml" />
+    <None Include="pages\my\index.wxss" />
+    <None Include="pages\order\list.json" />
+    <None Include="pages\order\list.wxml" />
+    <None Include="pages\order\list.wxss" />
+    <None Include="project.config.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

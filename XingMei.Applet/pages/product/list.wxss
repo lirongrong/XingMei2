@@ -1,0 +1,6 @@
+.pro_box{ margin:20rpx 0 0 2%; background: #fff; width: 48%;}
+.pro_img{ width: 100%; height: 280rpx;}
+.note_text{ top: 10rpx; right: 0; color: #fff; width: 100rpx; height: 30rpx; line-height: 30rpx; text-align: center;}
+.note_num{ bottom: 40rpx; right: 30rpx; background: red; border-radius: 100%; color: #fff;width: 70rpx; height: 70rpx; text-align: center; line-height:70rpx; font-size: 34rpx; font-weight: bold;}
+.note_num::after{content: ''; background: rgba(255, 0, 0, 0.19); width: 90rpx; height: 90rpx; display: block; border-radius: 100%; left: -9rpx; top:-9rpx; position: absolute;}
+.pro_price::before{ content: '¥'; font-size: 24rpx; margin-right: 6rpx;}

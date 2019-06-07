@@ -1,0 +1,12 @@
+<import src="../../wxParse/wxParse.wxml" />
+<view class='bannerDetails'>
+  <view class='btn_bottom_box flex flex_align_center'>
+    <text class='price'>{{model.price}}</text>
+    <view class='flex_item col999 ml10 f14'> </view>
+    <button class='f14' open-type="getUserInfo" bindgetuserinfo="tapPay">立即购买</button>
+  </view>
+  <view>
+    <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+  </view>
+  <view class='h55'></view>
+</view>

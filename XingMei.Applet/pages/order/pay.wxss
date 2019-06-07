@@ -1,0 +1,178 @@
+/* pages/maskDelivery/maskDelivery.wxss */
+
+page {
+  background-color: #f8f8f8;
+}
+
+.maskDelivery_address {
+  width: 90%;
+  height: 90rpx;
+  font-size: 26rpx;
+  line-height: 90rpx;
+}
+
+.maskDelivery_addressa {
+  float: left;
+}
+
+.maskDelivery_addressb {
+  float: right;
+}
+
+.maskDelivery_addressBox {
+  width: 90%;
+  font-size: 26rpx; 
+  padding:20rpx 40rpx; background:#fff; border-bottom:2rpx solid #eee;
+}
+
+.addressBox_top {  
+  margin-top:20rpx;
+  margin-bottom:20rpx;
+}
+.addressBox_bottom{
+  margin-bottom:20rpx;
+}
+
+.allCommodity {
+  width: 95%;
+  height: 300rpx;
+  background: #fff;
+  font-size: 28rpx;
+  padding-left: 5%;
+  margin-top: 20rpx;
+  position: relative;
+}
+
+.allCommodity:first-child {
+  margin-top: 0rpx;
+}
+
+.allCommodity_title {
+  width: 100%;
+  height: 109rpx;
+  border-bottom: 1px solid #efefef;
+  line-height: 109rpx;
+}
+
+.allCommodity_titleright {
+  font-size: 24rpx;
+  color: #d288c3;
+  float: right;
+  margin-right: 30rpx;
+}
+
+.allCommodity_content {
+  height: 246rpx;
+  display: flex;
+}
+
+.allCommodity_contentLeft {
+  width: 182rpx;
+  height: 182rpx;
+  margin-top: 20rpx;
+}
+
+.allCommodity_contentLeft image {
+  width: 100%;
+  height: 100%;
+}
+
+.allCommodity_contentright {
+  width: 460rpx;
+  margin-left: 25rpx;
+  margin-top: 25rpx;
+}
+
+.contentright_title {
+  font-size: 28rpx;
+}
+
+.contentright_hint {
+  font-size: 22rpx;
+  color: #666;
+  line-height: 53rpx;
+}
+
+.contentright_priceTotal {
+  color: #d288c3;
+  font-size: 24rpx;
+}
+
+.contentright_priceNum {
+  position: absolute;
+  bottom: 46rpx;
+  right: 60rpx;
+  color: #666;
+  font-size: 24rpx;
+}
+
+.Commodity_select {
+  width: 56rpx;
+  height: 246rpx;
+  line-height: 246rpx;
+}
+
+.show {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+.bottom_nav {
+  width: 100%;
+  height: 112rpx;
+  background: #fff;
+  position: fixed;
+  bottom: 0rpx;
+  left: 0rpx;
+  /* display: flex; */
+}
+
+.navCheckall {
+  font-size: 28rpx;
+  margin-left: 30rpx;
+  float: left;
+  display: flex;
+}
+
+.allSelelct {
+  margin-top: 35rpx;
+}
+
+.navCheckall_text {
+  margin-left: 10rpx;
+  margin-top: 35rpx;
+}
+
+.nav_left {
+  float: right;
+  display: flex;
+}
+
+.navTotalprices {
+  font-size: 24rpx;
+  color: #666;
+  margin-right: 18rpx;
+  line-height: 112rpx;
+}
+
+.navsizeClor {
+  color: #d288c3;
+}
+
+.navHnit {
+  font-size: 22rpx;
+  text-align: right;
+}
+
+.navButton {
+  width: 220rpx;
+  height: 112rpx;
+  border-radius: 0rpx;
+  background: #d288c3;
+  font-size: 28rpx;
+  line-height: 112rpx;
+  color: #fff;
+}

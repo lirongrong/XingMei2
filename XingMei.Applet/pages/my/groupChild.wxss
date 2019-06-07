@@ -1,0 +1,29 @@
+/* pages/groupChild/groupChild.wxss */
+page {
+  background-color: #f8f8f8;
+}
+.groupChild_content{
+  width:90%;
+  min-height:330rpx;
+  margin-left:4%;
+  background: #fff;
+  margin-top:24rpx;
+  padding-bottom:108rpx;
+  border-radius: 10rpx;
+}
+ .clearfloat:after{display:block;clear:both;content:"";visibility:hidden;height:0}
+   .clearfloat{zoom:1}
+.groupChild_contentList{
+  float: left;
+width:180rpx;
+text-align: center;
+margin-left:35rpx;
+margin-top:75rpx;
+}
+.groupChild_contentList image{
+  width:112rpx;
+  height:112rpx;
+}
+.contentList_name{
+  font-size: 22rpx;
+}

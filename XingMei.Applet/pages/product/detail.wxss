@@ -1,0 +1,152 @@
+/* pages/bannerDetails/bannerDetails.wxss */
+@import "/wxParse/wxParse.wxss";
+.hidden {
+  display: none;
+}
+.bannerDetails_img{
+  width:750rpx;
+  height:1333rpx;
+}
+.bannerDetails_img image{
+  width:100%;
+  height: 100%;
+}
+.btn_bottom_box{ position: fixed; bottom:0; border-top: 2rpx solid #f5f5f5; padding:20rpx; background: #fff; right: 0; left: 0;}
+.btn_bottom_box .price{ font-size: 42rpx; color:#d288c3; font-weight: bold; }
+.btn_bottom_box .price::before{ content: '¥'; font-size:32rpx; margin-right: 10rpx; font-weight: normal;}
+.btn_bottom_box button{ width: 40%; background: #d288c3; height: 70rpx; line-height: 70rpx; border-radius: 60rpx; color: #fff; }
+
+.bannerDetails_btn{
+  font-size: 22rpx;
+  width:100%;
+  height:80rpx;
+  background: #d288c3;
+  color:#fff;
+  text-align: center;
+  line-height: 80rpx;
+  position: fixed;
+  bottom:0;
+  right:0rpx;
+  left: 0;
+  border-radius: 0rpx;
+}
+.commodity_screen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.2;
+  overflow: hidden;
+  z-index: 1000;
+  color: #fff;
+}
+/*底部支付对话框 */
+.commodity_attr_box {
+  height: 609rpx;
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 2000;
+  background: #fff;
+  padding-top: 20rpx;
+}
+.bannerDetails_boxTitle{
+  height:100rpx;
+  border-bottom: 1rpx solid #f3f3f3;
+  position: relative;
+}
+.boxTitle_clones{
+width:32rpx;
+height:30rpx;
+line-height: 90rpx;
+z-index: 9999;
+  position: absolute;
+  left:35rpx;
+}
+.boxTitle_clones image{
+  width:100%;
+  height:100%; 
+}
+.boxTitle_head{
+  font-size: 32rpx;
+  line-height: 90rpx;
+  text-align: center;
+}
+.bannerDetails_money{
+  text-align: center;
+  margin-top:55rpx;
+  margin-bottom:50rpx;
+  font-size: 60rpx;
+  font-weight: bold;
+}
+.attrBox_text{
+  text-align: center;
+    color:#a3a3a3;
+    font-size: 30rpx;
+    margin-top:18rpx;
+}
+.attrBox_btn button{
+  width:650rpx;
+  margin:0rpx auto;
+  height:83rpx;
+  font-size: 30rpx;
+  color:#fff;
+  margin-top:70rpx;
+  background: #d288c3;
+  border:none;
+}
+
+
+/* 尚未支付弹出框 */
+
+.mask {
+  width:100%;
+  height:100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+
+.myToast {
+  position: fixed;
+  top: 420rpx;
+  left: 78rpx;
+  width: 594rpx;
+  height: 366rpx;
+  border-radius: 20rpx;
+  background: #fff;
+  z-index: 100;
+}
+.myToast_hint{
+  font-size: 34rpx;
+  text-align: center;
+  font-weight: blod;
+  margin-top:60rpx;
+  margin-bottom: 50rpx;
+}
+.myToast_text{
+  color:#a3a3a3;
+  font-size: 30rpx;
+  text-align: center;
+}
+.myToast_btn{
+  width: 100%;
+  height: 108rpx;
+  line-height: 108rpx;
+  text-align: center;
+  border-top: 1rpx solid #f3f3f3;
+  color:#abb5c9;
+  font-size: 32rpx;
+  border-radius: 0 0 10px 10px;
+  margin-top:60rpx;
+}
+
+

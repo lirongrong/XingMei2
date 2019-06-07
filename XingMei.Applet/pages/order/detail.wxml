@@ -1,0 +1,42 @@
+<view class='maskDelivery'>
+    <view style='padding:40rpx; 20rpx;' class='f14 colpink fbold'>{{order.statusName}}</view>
+    <view class='maskDelivery_addressBox'>
+        <view style='float:left;'>
+            <view class='addressBox_top'>
+                <text class='maskDelivery_addressBoxa'>收货人：{{order.address.name}} {{order.address.mobile}}</text>
+            </view>
+            <view class='addressBox_bottom'>收货地址：{{order.address.province||''}} {{order.address.city||''}} {{order.address.area || ''}} {{order.address.address || ''}}</view>
+        </view>
+    </view>
+    <view class='maskDelivery_content'>
+        <view class='allCommodity' wx:for="{{order.productList}}" wx:key="key">
+            <view class='allCommodity_content'>
+                <view class='allCommodity_contentLeft'>
+                    <image src="{{item.image}}"></image>
+                </view>
+                <view class='allCommodity_contentright'>
+                    <view class=" {{item.isShow?'hidden':'show'}}">
+                        <text class='contentright_title' decode="{{true}}">{{item.name}}</text>
+                    </view>
+                    <!-- <view class='contentright_hint'>{{item.productId==1 ? '[dza]第二肌面膜旗舰店6盒装，肌肤的有机食品' : '[dza]第二肌面膜旗舰店1片装，肌肤的有机食品'}}</view> -->
+                    <view class='contentright_price'>
+                        <text class='contentright_priceTotal'>￥{{item.price}}</text>
+                        <text class='contentright_priceNum'>x{{item.count}}</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <!-- 底部导航 -->
+    <view class='bottom_nav flex flex_align_center'>
+        <text bindtap='tapIndex' class='f12 flex_item ml10' hover-class='none'>返回首页</text>
+        <!-- 总价 -->
+        <view class='nav_left '>
+            <view class='navTotalprices'>
+                <text>合计：</text>
+                <text class='navsizeClor'>￥{{order.totalPrice}}</text>
+            </view>
+            <button class='navButton' hidden='{{order.status != 50}}' bindtap='tapPay'>支付</button>
+        </view>
+    </view>
+</view>

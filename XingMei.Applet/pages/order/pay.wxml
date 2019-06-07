@@ -1,0 +1,62 @@
+<!--pages/maskDelivery/maskDelivery.wxml-->
+<view class='maskDelivery'>
+  <!-- <view class='maskDelivery_address'>
+    <text class='maskDelivery_addressa'>请选择收获地址</text>
+    <text class='maskDelivery_addressb'>></text>
+  </view> -->
+  <view class='maskDelivery_addressBox flex flex_align_center' bindtap='tapAddress'>
+    <view class='flex_item'>
+      <view class='addressBox_top'>
+        <view class='maskDelivery_addressBoxa' wx:if='{{!address.name}}'>请选择收货地址</view>
+        <view class='maskDelivery_addressBoxa' wx:else='{{address.name}}'>
+            <text class='db'>收货人：{{address.name}} {{address.mobile}}</text>
+            <text class='db mt10'>收货地址：{{address.province}} {{address.city}} {{address.area}} {{address.address}}</text>
+        </view>
+      </view>
+    </view>
+    <view class='maskDelivery_addressb'>></view>
+  </view>
+  <view class='maskDelivery_content'>
+    <view class='allCommodity' wx:for="{{carts}}" wx:key="key">
+      <view class='allCommodity_content'>
+        <!--<view class='Commodity_select'>
+          -->
+        <!-- wx:if 是否选择显示不同图标 -->
+        <!--
+          <icon wx:if="{{item.selected}}" type="success" color="#d288c3" bindtap="selectList" data-index="{{index}}" size="18" />
+          <icon wx:else="" type="circle" bindtap="selectList" data-index="{{index}}" size="18" />
+        </view>-->
+        <view class='allCommodity_contentLeft'>
+          <image src="{{item.image}}"></image>
+        </view>
+        <view class='allCommodity_contentright'>
+          <view>
+            <text class='contentright_title'>{{item.name}}</text>
+          </view>
+          <!-- <view class='contentright_hint'>{{item.desc}}</view> -->
+          <view class='contentright_price'>
+            <text class='contentright_priceTotal' style='bottom:120rpx;position:absolute;'>￥{{item.price}} 元</text>
+            <text class='contentright_priceNum'>x{{item.count}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 底部导航 -->
+  <view class='bottom_nav'>
+    <!-- wx:if 是否全选显示不同图标 --><!--
+    <view class='navCheckall'>
+      <icon wx:if="{{selectAllStatus}}" class='allSelelct' type="success" color="#d288c3" bindtap="selectAll" size="18" />
+      <icon wx:else="" type="circle" class='allSelelct' bindtap="selectAll" size="18" />
+      <view class='navCheckall_text'>全选</view>
+    </view>-->
+    <!-- 总价 -->
+    <view class='nav_left'>
+      <view class='navTotalprices'>
+        <text>合计：</text>
+        <text class='navsizeClor'>￥{{totalPrice}}</text>
+      </view>
+      <button class='navButton' bindtap='tapOrder'>提交</button>
+    </view>
+  </view>
+</view>

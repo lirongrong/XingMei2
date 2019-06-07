@@ -1,0 +1,122 @@
+<!--index.wxml-->
+<view class="person">
+    <view class='person_top'>
+        <view class='person_topimg'>
+            <image src='../../images/center_bg_top.png'></image>
+        </view>
+        <view class='person_topLeft'>
+            <view class='person_topheadportrait'>
+                <open-data type="userAvatarUrl"></open-data>
+            </view>
+            <view class='person_topName'>
+                <open-data type="userNickName"></open-data>
+            </view>
+        </view>
+        <!--<view class='person_topright' bindtap="tapAddress">
+      <image src='../../images/Botton_address_top_right.png'></image>
+    </view>-->
+    </view>
+    <view class='person_orderForm'>
+        <view class='person_orderFormtop' catchtap="tapOrder" data-typeid="0">
+            <view class='orderFormtop_left'>我的订单</view>
+            <view class='orderFormtop_right'>
+                <text>查看全部订单</text>
+            </view>
+        </view>
+        <view class='person_orderFormbottom'>
+            <view class='orderFormbottom_list'>
+                <view class="orderFormbottom_num {{statusCount.waitingPayment== 0 ? 'hidden':'show'}}">{{statusCount.waitingPayment}}</view>
+                <view catchtap="tapOrder" data-type="待付款" data-typeid="1">
+                    <view class='list_img'>
+                        <image src='../../images/icon_1_center.png'></image>
+                    </view>
+                    <text class='list_text'>待付款</text>
+                </view>
+
+            </view>
+            <view class='orderFormbottom_list'>
+                <view class="orderFormbottom_num {{statusCount.paid== 0 ? 'hidden':'show'}}">{{statusCount.paid}}</view>
+                <view catchtap="tapOrder" data-type="待发货" data-typeid="2">
+                    <view class='list_img'>
+                        <image src='../../images/icon_2_center.png'></image>
+                    </view>
+                    <text class='list_text'>待发货</text>
+                </view>
+            </view>
+            <view class='orderFormbottom_list'>
+                <view class="orderFormbottom_num {{statusCount.sended== 0 ? 'hidden':'show'}}">{{statusCount.sended}}</view>
+                <view catchtap="tapOrder" data-type="已发货" data-typeid="3">
+                    <view class='list_img'>
+                        <image src='../../images/icon_3_center.png'></image>
+                    </view>
+                    <text class='list_text'>已发货</text>
+                </view>
+            </view>
+            <view class='orderFormbottom_list'>
+                <view catchtap="tapOrder" data-type="已完成" data-typeid="4">
+                    <view class='list_img'>
+                        <image src='../../images/icon_4_center.png'></image>
+                    </view>
+                    <text class='list_text'>已完成</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class='person_mine'>
+        <view>
+            <navigator url='/pages/my/gift' class='person_mineList' hover-class="none">
+                <view class='mineList_img'>
+                    <image src='/images/icon_mask_center.png'></image>
+                </view>
+                <view class='mineList_text'>我的面膜</view>
+            </navigator>
+        </view>
+        <view>
+            <navigator url='/pages/my/money' class='person_mineList' hover-class="none">
+                <view class='mineList_img'>
+                    <image src='/images/icon_bonus_center.png'></image>
+                </view>
+                <view class='mineList_text'>我的奖金</view>
+            </navigator>
+        </view>
+        <view>
+            <navigator url='/pages/my/group' class='person_mineList' hover-class="none">
+                <view class='mineList_img'>
+                    <image src='/images/icon_group_center.png'></image>
+                </view>
+                <view class='mineList_text'>我的团队
+                    <text style='font-size:20rpx;color:gray;margin-left:5px;'>{{groupCount}}人</text>
+                    <!-- <icon class='icon_point'></icon> -->
+                </view>
+            </navigator>
+        </view>
+        <view>
+            <navigator url='/pages/my/fans' class='person_mineList' hover-class="none">
+                <view class='mineList_img'>
+                    <image src='/images/icon_fans_center.png'></image>
+                </view>
+                <view class='mineList_text'>我的粉丝
+                    <text style='font-size:20rpx;color:gray;margin-left:5px;'>{{fansCount}}人</text>
+                    <!-- <icon class='icon_point'></icon> -->
+                </view>
+            </navigator>
+        </view>
+        <view>
+            <navigator url='/pages/address/list' class='person_mineList' hover-class="none">
+                <view class='mineList_img'>
+                    <image src='/images/icon_address_center.png'></image>
+                </view>
+                <view class='mineList_text'>我的地址</view>
+            </navigator>
+        </view>
+        <view>
+            <navigator url='/pages/index/share' class='person_mineList' hover-class="none">
+                <view class='mineList_img'>
+                    <image src='/images/icon_qrcode_center.png'></image>
+                </view>
+                <view class='mineList_text'>我的二维码</view>
+            </navigator>
+        </view>
+    </view>
+    <floatTab></floatTab>
+</view>

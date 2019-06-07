@@ -1,0 +1,105 @@
+<import src="../../wxParse/wxParse.wxml" />
+<view class='bonus'>
+  <view class='bonus_top'>
+    <image src='/images/pic-bg@3x.png' style='width:100%;height:100%;'></image>
+    <view class='bonus_topconcten'>
+      <view class='bonus_topTitle'>
+        <view class='topTitle_content' bindtap='tapTotalDlg'>累计奖金</view>
+        <view class='topTitle_content' bindtap='tapWithdrawDlg'>已提现奖金</view>
+        <view class='topTitle_contentlast'>剩余奖金</view>
+      </view>
+      <view class='bonus_topList'>
+        <view class='topList_content' wx:for="{{topList}}" wx:key="key">
+          <text>{{item}}</text>元
+        </view>
+      </view>
+      <view class='bonus_topHow' bindtap='tapDescDlg'>
+        如何获取奖金
+        <image style='width:20rpx;height:20rpx;' src="/images/botton_more_red@3x.png"></image>
+      </view>
+
+    </view>
+  </view>
+  <view class="bonus_button {{topList[2] > 0 ? 'show ':'hidden '}}" bindtap='tapWithdraw'>提现</view>
+  <view>
+    <view class="{{topList[2] == 0 ? 'show ':'hidden '}}">
+      <view class='nothave_btn'>当前暂无可提现奖金</view>
+    </view>
+  </view>
+  <!-- 弹出框：如何获取奖金 -->
+  <view class='mask' hidden="{{dlgType!=1}}" catchtouchmove='true'>
+    <view class="myBouns">
+      <view class="myBouns_title">如何获取奖金</view>
+      <view class='myBouns_contcen'>
+        <scroll-view scroll-y="true" style="height:360rpx;">
+         <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+        </scroll-view>
+      </view>
+      <view class='myBouns_btn' bindtap='tapCloseDlg'>知道了</view>
+    </view>
+  </view>
+  <!-- 弹出框：累计奖金 -->
+  <view class='mask' hidden="{{dlgType!=2}}" catchtouchmove='true'>
+    <view class="myBouns">
+      <view class="myBouns_title">累计奖金</view>
+      <view class='myBouns_contcen'>
+        <view style="margin-top:105rpx;" class="{{topList[0] == 0 ? ' show ':'hidden '}}">暂无记录</view>
+        <scroll-view scroll-y="true" style="height:360rpx;">
+          <view class="myBouns_accumuList" wx:for="{{totalBrokerage}}" wx:key="key">
+            <view style='margin-top:25rpx;'>
+              <view class='accumuList_img'>
+                <image src="{{item.userImage}}"></image>
+              </view>
+              <view class='accumuList_left'>
+                <view class='accumuList_title'>{{item.name}}</view>
+                <view class='accumuList_time'>{{item.updateTime}}</view>
+              </view>
+              <view class='accumuList_num'>+{{item.money}}</view>
+            </view>
+          </view>
+        </scroll-view>
+      </view>
+      <view class='myBouns_btn' bindtap='tapCloseDlg'>知道了</view>
+    </view>
+  </view>
+  <!-- 弹出框：已提现奖金 -->
+  <view class='mask' hidden="{{dlgType!=3}}" catchtouchmove='true'>
+    <view class="myBouns">
+      <view class="myBouns_title">已提现奖金</view>
+      <view class='myBouns_contcen'>
+        <view style="margin-top:105rpx;" class="{{topList[1] == 0 ? ' show ':'hidden '}}">暂无记录</view>
+        <scroll-view scroll-y="true" style="height:360rpx;">
+          <view class="myBouns_accumuList" wx:for="{{withdrawList}}" wx:key="key">
+            <view style='margin-top:25rpx;'>
+              <view class='accumuList_left'>
+                <view class='accumuList_title'>
+                  提现<b style='font-size:8px;color:red'>{{item.status==0?'  审核中':''}}</b>
+                </view>
+                <view class='accumuList_time'>{{item.updateTime}}</view>
+              </view>
+              <view class='accumuList_num' style='color:#000;'>-{{item.money}}</view>
+            </view>
+          </view>
+        </scroll-view>
+      </view>
+      <view class='myBouns_btn' bindtap='tapCloseDlg'>知道了</view>
+    </view>
+  </view>
+  <!-- 弹出框：提现 -->
+  <view class='mask' hidden="{{dlgType!=4}}" catchtouchmove='true'>
+    <view class="myToast">
+      <text class='myToast_clones' bindtap='tapCloseDlg'>x</text>
+      <text class='myToast_title'>请输入提现金额</text>
+      <view class='myToast_content'>
+        <input type='number' style='width:300rpx;height:90rpx;border:1px solid #acacac;margin:0rpx auto;text-align:center; font-size: 40rpx;font-weight: bold; ' maxlength="11" bindinput="getInput" value="{{withdrawMoney}}" />
+      </view>
+      <view class='myToast_hint'>当前最多可领取{{remainAmount}}元</view>
+      <view class="{{withdrawMoney.length ==0 ? 'show ':'hidden '}}" bindtap='tapSubmitWithdraw'>
+        <button class='myToast_btn'>确定提现</button>
+      </view>
+      <view class="{{withdrawMoney.length >0 ? 'show ':'hidden '}}"  bindtap='tapSubmitWithdraw'>
+        <button class='myToast_btn' style='background: #d288c3; '>确定提现</button>
+      </view>
+    </view>
+  </view>
+</view>

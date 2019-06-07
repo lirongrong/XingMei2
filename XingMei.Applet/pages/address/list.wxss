@@ -1,0 +1,114 @@
+page {
+  background-color: #f8f8f8;
+}
+.show {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+.shippingAddress_list{
+  position: relative;
+  width:100%;
+  height:200rpx;
+  background: #fff;
+  border: 1px solid #efefef;
+  font-size: 24rpx;
+  margin-top:20rpx;
+  /* display: flex; */
+}
+.default{
+    font-size: 20rpx;
+  width:82rpx;
+  height:30rpx;
+  text-align: center;
+  line-height: 30rpx;
+  position: absolute;
+  top:0rpx;
+  left:0rpx;
+  color:#fff;
+   background: #d288c3;
+}
+.default{
+    font-size: 20rpx;
+  width:82rpx;
+  height:30rpx;
+  text-align: center;
+  line-height: 30rpx;
+  position: absolute;
+  top:0rpx;
+  left:0rpx;
+  color:#fff;
+   background: #d288c3;
+}
+.shippingAddress_listLeft{
+  float: left;
+}
+.listLeft_top{
+  margin-top:36rpx;
+  margin-bottom:32rpx;
+  margin-left:45rpx;
+}
+.listLeft_topName{
+  font-size: 28rpx;
+}
+.listLeft_topPhone{
+   margin-left:210rpx;
+}
+.listLeft_address{
+  display: block;
+  padding-left:45rpx;
+  width:510rpx;
+  color:#a4a4a4;
+}
+
+.shippingAddress_listRight{
+  float: right;
+  width:160rpx;
+  height:200rpx;
+  border-left: 1px solid #efefef;
+  text-align: center;
+}
+.listRigh_img{
+  width:30rpx;
+  height:30rpx;
+  margin:0rpx auto;
+  margin-top:52rpx;
+  margin-bottom:25rpx;
+}
+.listRigh_img image{
+   width:100%;
+  height:100%;
+}
+.shippingadd_btn{
+  width: 226rpx;
+  height:78rpx;
+  margin: 0rpx auto;
+  line-height: 70rpx;
+  border-radius: 40rpx;
+  background: #000;
+  color:#fff;
+  font-size: 26rpx;
+  text-align: center;
+  position: fixed;
+  bottom:50rpx;
+  margin-left:260rpx;
+}
+.shippingadd_btn text{
+   color:#fff;
+}
+.shippingadd_btnadd{
+  font-size: 40rpx;
+}
+.shippingAddress_hollow{
+  text-align: center;
+}
+.shippingAddress_hollow{
+  width:100%;
+  color:#aeaeae;
+  font-size: 30rpx;
+  margin-top: 355rpx;
+  text-align: center;
+}

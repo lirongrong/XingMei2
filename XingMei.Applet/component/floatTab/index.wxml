@@ -1,0 +1,9 @@
+<!-- 固定的客服图片 -->
+<view class='customService'>
+    <navigator url='/pages/index/share' hover-class="none">
+        <image src='/images/icon_releases.png' class='customService_image'></image>
+    </navigator>
+    <button open-type='contact' style='border: 0; background-color: transparent; outline: none; padding:0; line-height:0; border-radius:50%;'>
+        <image src='/images/Botton_Customerservice@3x.png' class='customService_image'></image>
+    </button>
+</view>

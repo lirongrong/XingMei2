@@ -1,0 +1,6 @@
+<view>
+  <form>
+    <image src='../../images/bg_share.png' mode='widthFix' style='width:100%;'></image>
+    <button open-type="getUserInfo" bindgetuserinfo="tapAuth" class="mj-btn">用户授权</button>
+  </form>
+</view>

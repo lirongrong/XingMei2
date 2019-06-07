@@ -1,0 +1,9 @@
+<!--pages/groupChild/groupChild.wxml-->
+<view class='groupChild'>
+    <view class='groupChild_content clearfloat'>
+        <view class='groupChild_contentList' wx:for="{{list}}" wx:key="key">
+            <image src='{{item.image}}'></image>
+            <view class='contentList_name'>{{item.name}}</view>
+        </view>
+    </view>
+</view>

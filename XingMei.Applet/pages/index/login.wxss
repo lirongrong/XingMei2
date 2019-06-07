@@ -1,0 +1,4 @@
+page{
+    background-color: #fff;
+}
+.mj-btn{ width: 80%; margin: 40rpx auto; background-color: #d288c3; color: #fff; border-radius: 18rpx;}

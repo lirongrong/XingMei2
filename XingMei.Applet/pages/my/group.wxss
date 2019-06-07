@@ -1,0 +1,257 @@
+/* pages/group/group.wxss */
+
+page {
+  background-color: #f8f8f8;
+}
+
+.group_content {
+  margin-left: 8rpx;
+}
+
+.group_hint {
+  /* height:76rpx; *//* line-height: 76rpx; */
+  font: 20rpx;
+  font-size: 22rpx;
+  text-align: right;
+  margin-right: 25rpx;
+  margin-top: 26rpx;
+  margin-bottom: 10rpx;
+  color: red;
+}
+
+.group_contentList {
+  width: 346rpx;
+  height: 311rpx;
+  background: #fff;
+  border-radius: 30rpx;
+  float: left;
+  margin-left: 15rpx;
+  margin-top: 15rpx;
+
+}
+
+.contentList_img {
+  width: 110rpx;
+  height: 110rpx;
+  margin: 26rpx auto;
+}
+
+.contentList_img image {
+  width: 100%;
+  height: 100%;
+}
+
+.contentList_name {
+  font-size: 26rpx;
+  text-align: center;
+}
+
+.contentList_set {
+  width:180rpx;
+  margin:0rpx auto;
+  position:relative;
+    margin-top: 26rpx;
+}
+
+.contentList_set image {
+  width: 45rpx;
+  height: 45rpx;
+  border-radius: 50%;
+}
+.contentList_set image:nth-child(1) {
+  width: 45rpx;
+  height: 45rpx;
+  position:absolute;
+  left:35rpx;
+}
+.contentList_set image:nth-child(2) {
+  width: 45rpx;
+  height: 45rpx;
+  position:absolute;
+  left:70rpx;
+}
+.contentList_setText{
+  min-width:35rpx;
+  height:45rpx;
+  border-radius:22rpx;
+   position:absolute;
+  left:105rpx;
+  background: #d288c3;
+  color:#fff;
+  font-size: 18rpx;
+  line-height:45rpx;
+  text-align: center;
+  padding:0rpx 5rpx;
+}
+.show {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+.no_text{
+  width:100%;
+  font-size: 26rpx;
+  text-align: center;
+  margin-top:26rpx;
+}
+
+.group_no{
+  font-size: 40rpx;
+  color:#aeaeae;
+  text-align: center;
+  margin-top:280rpx;
+}
+/* 弹出框 */
+
+.mask {
+  width:100%;
+  height:100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+
+.myToast {
+  position: fixed;
+  top: 320rpx;
+  left: 78rpx;
+  width: 594rpx;
+  height: 502rpx;
+  border-radius: 20rpx;
+  background: #fff;
+  z-index: 100;
+}
+
+.myToast_clones {
+  font-size: 32rpx;
+  color: #bbb;
+  float: right;
+  margin-top: 25rpx;
+  margin-right: 25rpx;
+}
+
+.myToast_title {
+  display: block;
+  font-size: 36rpx;
+  color: #d288c3;
+  margin-top: 90rpx;
+  margin-bottom: 40rpx;
+  text-align: center;
+}
+
+.myToast_content {
+  font-size: 28rpx;
+  color: #555;
+  width: 410rpx;
+  margin: 0rpx auto;
+}
+
+.myToast_hint {
+  font-size: 26rpx;
+  text-align: center;
+  color: #8e8e8e;
+  padding-left: 8rpx;
+  margin-top: 23rpx;
+}
+
+.myToast_btn {
+  width: 280rpx;
+  height: 75rpx;
+  background: #acacac;
+  margin-top: 32rpx;
+  color: #fff;
+  font-size: 32rpx;
+  border-radius: 8rpx;
+}
+
+
+.myBouns{
+  position: fixed;
+  top: 320rpx;
+  left: 78rpx;
+  width: 594rpx;
+  height: 618rpx;
+  border-radius: 20rpx;
+  background: #fff;
+  z-index: 100;
+  font-size: 28rpx;
+}
+.myBouns_btn{
+  width:100%;
+  position: absolute;
+  bottom:0rpx;
+  left:0rpx;
+  border-top:1px solid #f3f3f3;
+  height:90rpx;
+  text-align: center;
+  line-height: 90rpx;
+  color:#d288c3;
+  border-bottom-right-radius:20rpx;
+border-bottom-left-radius:20rpx;
+font-size: 32rpx;
+}
+.myBouns_title{
+  width:100%;
+  text-align: center;
+  margin-top:60rpx;
+  margin-bottom:40rpx;
+  font-size: 32rpx;
+}
+.myBouns_contcen{
+  width:90%;
+  margin-left:5%;
+  height:360rpx;
+  font-size: 26rpx;
+  text-align: center;
+}
+.myBouns_contcenList{
+  height:32rpx;
+  margin-top:25rpx;
+}
+.myBouns_contcenList:first-child{
+  margin-top:0rpx;
+}
+.myBouns_accumuList{
+  width:100%;
+  height:100rpx;
+  border-bottom:1rpx solid #f3f3f3;
+}
+
+.accumuList_img{
+  float: left;
+  width:60rpx;
+  height:60rpx;
+  border-radius: 50%;
+}
+.accumuList_img image{
+  width:100%;
+  height:100%;
+}
+.accumuList_left{
+  float: left;
+  text-align: left;
+  margin-left:20rpx;
+}
+.accumuList_title{
+  font-size: 26rpx;
+}
+.accumuList_time{
+  color:#a8a8a8;
+  font-size: 18rpx;
+  margin-top:10rpx;
+}
+.accumuList_num{
+  float: right;
+  margin-right:30rpx;
+  font-size: 26rpx;
+  color:red;
+  font-weight: bold;
+  margin-top:10rpx;
+}
+

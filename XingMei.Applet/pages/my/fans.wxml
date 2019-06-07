@@ -1,0 +1,10 @@
+<!--pages/groupChild/groupChild.wxml-->
+<view class='groupChild'>
+    <view class='groupChild_content clearfloat'>
+        <view class='groupChild_contentList' wx:for="{{list}}" wx:key="key" wx:if='{{list.length > 0}}'>
+            <image src='{{item.image}}'></image>
+            <view class='contentList_name'>{{item.name}}</view>
+        </view>
+        <view wx:if='{{list.length == 0}}' style='padding-top:100rpx;color:#aeaeae; text-align:center;'>当前没有粉丝</view>
+    </view>
+</view>

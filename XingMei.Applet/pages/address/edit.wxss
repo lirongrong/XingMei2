@@ -1,0 +1,77 @@
+/* pages/ediaddress/ediaddress.wxss */
+
+page {
+    background-color: #f8f8f8;
+}
+
+.address_message {
+    width: 100%;
+    height: 456rpx;
+    background: #fff;
+    margin-top: 24rpx;
+    position: relative;
+}
+
+.section {
+    width: 90%;
+    height: 90rpx;
+    line-height: 90rpx;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: row;
+    font-size: 28rpx;
+    border-bottom: 1px solid #efefef;
+}
+
+.form_group {
+    font-size: 28rpx;
+    border-bottom: 1px solid #efefef;
+    margin: 0 20rpx;
+}
+.form_group:last-child{ border-bottom: none;}
+.form_group label{ width: 20%; }
+.section_input {   
+    height: 2.8rem;
+    min-height: 2.8rem;
+    flex: 1;
+}
+
+.message_discern {
+    width: 235rpx;
+    height: 56rpx;
+    border: 1px solid #efefef;
+    border-radius: 6rpx;
+    color: #6d6d6d;
+    font-size: 26rpx;
+    text-align: center;
+    line-height: 56rpx;
+    margin: 0rpx auto;
+    margin-top: 50rpx;
+}
+
+.picker {
+    /* margin-left: 30rpx; */
+    line-height: 2.8rem;
+    height: 2.8rem;
+    /* color:#6d6d6d; */
+}
+
+.message_cancel {
+    position: absolute;
+    right: 36rpx;
+    bottom: 42rpx;
+    font-size: 26rpx;
+    color: #38f;
+}
+
+.btn-area {
+    margin-top: 88rpx;
+}
+
+.btn-area button {
+    width: 650rpx;
+    margin: 0 auto;
+    background: #d288c3;
+    color: #fff;
+    font-size: 34rpx;
+}

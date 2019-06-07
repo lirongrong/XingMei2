@@ -1,0 +1,12 @@
+.customService {
+  width: 78rpx; 
+  position: fixed;
+  right: 15rpx;
+  bottom: 30rpx;
+  z-index: 99;
+}
+
+.customService_image {
+  width: 78rpx;
+  height: 78rpx;
+}

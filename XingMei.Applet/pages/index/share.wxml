@@ -1,0 +1,8 @@
+<!--pages/share/share.wxml-->
+<view class='share'>
+  <!-- <view class='share_img' style="width:320px;;height:500px;margin:0rpx auto;margin-top:10px;background: #fff;">
+    <image src='{{downloadPosterBg}}'></image>
+  </view> -->
+   <canvas canvas-id="shareCanvas" style="width:320px;;height:569px;margin:0rpx auto;margin-top:10px;background: #fff;"></canvas> 
+  <view class='share_btn' bindtap='shareBtn'>保存名片海报后分享</view>
+</view>

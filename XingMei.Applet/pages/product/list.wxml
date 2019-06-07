@@ -1,0 +1,29 @@
+<!--pages/product/list.wxml-->
+<view class='f12 col999'>
+    <view class="flex flex_wrap" style='width:98%;'>
+        <block wx:for="{{list}}" wx:key="key">
+            <view class='pro_box' catchtap='tapProduct' data-id='{{item.id}}'>
+                <view class='pr'>
+                    <image src='{{item.image}}' class='pro_img'></image>
+                    <view class='pa note_text pr'>
+                        <text class='pa' style='z-index:1;right:0; top:0;'>{{item.tag}}</text>
+                        <image src='../../images/bg_note.png' class='pa' style='width:99rpx; top:0; right:-4rpx;' mode='widthFix'></image>
+                    </view>
+                    <view wx:if="{{item.number}}" class='pa note_num pr'>{{item.number}}片</view>
+                </view>
+                <view style='padding:0 20rpx 10rpx'>
+                    <view class='col333'>{{item.name}}</view>
+                    <view class='flex'>
+                        <text class='colred f16 pro_price'>{{item.price}}</text>
+                        <view class='flex_item flex_item_align_center ml05 f10'>
+                            {{item.text}}
+                        </view>
+                        <text hidden='{{item.id==0}}' class='colccc flex_item_align_center f10'>{{item.count}}人付款</text>
+                    </view>
+                </view>
+            </view>
+        </block>
+    </view>
+    <view class='h20'></view>
+    <floatTab></floatTab>
+</view>

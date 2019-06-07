@@ -1,0 +1,86 @@
+<import src="../../wxParse/wxParse.wxml" />
+<view class='bonus'>
+  <view class='bonus_top'>
+    <image src='/images/pic-bg@3x.png' style='width:100%;height:100%;'></image>
+    <view class='bonus_topconcten'>
+      <view class='bonus_topTitle'>
+        <view class='topTitle_content' bindtap='tapTotalDlg'>累计面膜</view>
+        <view class='topTitle_content' bindtap='tapSendDlg'>已发面膜</view>
+        <view class='topTitle_contentlast'>待发面膜</view>
+      </view>
+      <view class='bonus_topList'>
+        <view class='topList_content' wx:for="{{topList}}" wx:key="key">
+          <text>{{item}}</text>片
+        </view>
+      </view>
+      <view class='bonus_topHow' bindtap='tapDescDlg'>
+        如何获取面膜
+        <image style='width:20rpx;height:20rpx;' src="/images/botton_more_red@3x.png"></image>
+      </view>
+
+    </view>
+  </view>
+  <view class="bonus_button {{topList[2] > 0 ? 'show ':'hidden '}}" bindtap='tapSend'>发货</view>
+  <view>
+    <view class="{{topList[2] == 0 ? 'show ':'hidden '}}">
+      <view class='nothave_btn'>当前暂无面膜</view>
+    </view>
+  </view>
+  <!-- 弹出框：如何获取面膜 -->
+  <view class='mask' hidden="{{dlgType!=1}}" catchtouchmove='true'>
+    <view class="myBouns">
+      <view class="myBouns_title">如何获取面膜</view>
+      <view class='myBouns_contcen'>
+        <scroll-view scroll-y="true" style="height:360rpx;">
+            <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+        </scroll-view>
+      </view>
+      <view class='myBouns_btn' bindtap='tapCloseDlg'>知道了</view>
+    </view>
+  </view>
+  <!-- 弹出框：累计面膜 -->
+  <view class='mask' hidden="{{dlgType!=2}}" catchtouchmove='true'>
+    <view class="myBouns">
+      <view class="myBouns_title">累计面膜</view>
+      <view class='myBouns_contcen'>
+        <view style="margin-top:105rpx;" class="{{topList[0] == 0 ? ' show ':'hidden '}}">暂无记录</view>
+        <scroll-view scroll-y="true" style="height:360rpx;">
+          <view class="myBouns_accumuList" wx:for="{{totalList}}" wx:key="key">
+            <view style='margin-top:25rpx;'>
+              <view class='accumuList_left'>
+                <view class='accumuList_title'>签到领取</view>
+                <view class='accumuList_time'>{{item.updateTime}}</view>
+              </view>
+              <view class='accumuList_num'>+{{item.count}}</view>
+            </view>
+          </view>
+        </scroll-view>
+      </view>
+      <view class='myBouns_btn' bindtap='tapCloseDlg'>知道了</view>
+    </view>
+  </view>
+  <!-- 弹出框：已发面膜 -->
+  <view class='mask' hidden="{{dlgType!=3}}" catchtouchmove='true'>
+    <view class="myBouns">
+      <view class="myBouns_title">已发面膜</view>
+      <view class='myBouns_contcen'>
+        <view style="margin-top:105rpx;" class="{{topList[1] == 0 ? ' show ':'hidden '}}">暂无记录</view>
+        <scroll-view scroll-y="true" style="height:360rpx;">
+          <view class="myBouns_accumuList" wx:for="{{sendList}}" wx:key="key">
+            <view style='margin-top:25rpx;' >
+              <view class='accumuList_left'>
+                <view class='accumuList_title'>
+                  发货<b style='font-size:8px;color:red'>{{item.status==0?'  处理中':''}}</b>
+                </view>
+                <view class='accumuList_time'>{{item.updateTime}}</view>
+              </view>
+              <view class='accumuList_num' style='color:#000;'>-{{item.count}}</view>
+            </view>
+
+          </view>
+        </scroll-view>
+      </view>
+      <view class='myBouns_btn' bindtap='tapCloseDlg'>知道了</view>
+    </view>
+  </view>
+</view>

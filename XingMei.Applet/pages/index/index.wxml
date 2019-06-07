@@ -1,0 +1,156 @@
+<import src="../../wxParse/wxParse.wxml" />
+<view class="home_box">
+  <view>
+    <swiper indicator-dots="true" indicator-color="#cecece" indicator-active-color="#d288c3" autoplay="true" interval="3000" duration="500" circular="true" class='swiper'>
+      <block wx:for="{{bannerList}}" wx:key="key">
+        <swiper-item class="swiper_url" bindtap="tapBanner">
+          <image class="slide-image" src="{{item.image}}" mode="widthFix" data-url='{{item.url}}' />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class='home_prize'>
+    <view class='prize_list'>
+      <text class='prize_openup'>已获得面膜</text>
+      <text class='prize_title'>{{totalGiftCount}} 片</text>
+      <view class='prize_img'>
+        <image src='../../images/icon_mask@3x.png'></image>
+      </view>
+      <button class='prize_btn' bindtap='tapSend'>发货</button>
+    </view>
+    <view class='prize_list'>
+      <text class='prize_openup'>已获得奖金</text>
+      <text class='prize_title'>{{totalBrokerage}} 元</text>
+      <view class='prize_img'>
+        <image src='../../images/icon_Bonus@3x.png'></image>
+      </view>
+      <button class='prize_btn' bindtap='tapWithdraw'>提现</button>
+    </view>
+    <view class='prize_list'>
+      <text class='prize_openup'>已成功邀请</text>
+      <text class='prize_title'>{{totalShareCount}} 个</text>
+      <view class='prize_img'>
+        <image src='../../images/icon_share@3x.png'></image>
+      </view>
+      <button class='prize_btn' bindtap='tapInvite'>查看</button>
+    </view>
+  </view>
+  <view class='home_qiand'>
+    <image src='/images/pic_qian_bg@3x.png'></image>
+    <button class='qiandaoBtn' bindtap='tapSignIn' data-num="{{signNum}}"></button>
+    <view class='home_qiandTop'>
+      <image src='/images/btn_qian2@3x.png'></image>
+      <image src="{{imagePath}}" class="lucky-index-img"></image>
+      <canvas class="progress_canvas" style="pointer-events: none;" canvas-id="canvasProgress"> </canvas>
+    </view>
+    <view class='home_qiandText' hidden='{{shareLevel < 5}}' style='left:110px;padding-left:20px;'>
+      {{ isCheckIn? '今天面膜已领取，明天再来吧~' : '快来点击领取面膜，分享好友吧~' }}
+    </view>
+    <view class='home_qiandText' hidden='{{shareLevel <= 0 || shareLevel >= 5}}'>
+        您已签到
+      <text>{{signNum}}</text>天，还差 <text> {{totalDays - signNum < 0 ? 0 : totalDays-signNum }}</text> 天就可以免费领 <text>1</text> 片面膜
+    </view>
+    <view class='home_qiandText' hidden='{{shareLevel > 0}}' style='left:110px;padding-left:20px;'>
+      请先购买才能免费签到领面膜哦~
+    </view>
+    <view class='home_Signin'>
+      <view class='signin_conten'>
+        <view class='sign-com'>
+          <view class='modle'>
+            <view class='moday'>
+              <label class='dd'>5天/片</label>
+              <label class='dd'>4天/片</label>
+              <label class='dd'>3天/片</label>
+              <label class='dd'>2天/片</label>
+              <label class='dd'>1天/片</label>
+              <label class='dd'>领微整</label>
+              <label class='dd'>领整形</label>
+              <label class='dd'></label>
+            </view>
+            <view class='mol'>
+              <view class='mol-line'></view>
+              <view class='mol-ites'>
+                <view class="ite first {{shareLevel>=min?'hover':''}}" data-n='{{min}}'>
+                  <label class='n'></label>
+                </view>
+                <view class="ite {{shareLevel>=min+1?'hover':''}}" data-n='{{min+1}}'>
+                  <label class='n'></label>
+                </view>
+                <view class="ite {{shareLevel>=min+2?'hover':''}}" data-n='{{min+2}}'>
+                  <label class='n'></label>
+                </view>
+                <view class="ite {{shareLevel>=min+3?'hover':''}}" data-n='{{min+3}}'>
+                  <label class='n'></label>
+                </view>
+                <view class="ite {{shareLevel>=min+4?'hover':''}}" data-n='{{min+4}}'>
+                  <label class='n'></label>
+                </view>
+                <view class="ite {{shareLevel>=min+5?'hover':''}}" data-n='{{min+5}}'>
+                  <label class='n'></label>
+                </view>
+                <view class="ite {{shareLevel>=min+6?'hover':''}}" data-n='{{max}}'>
+                  <label class='n'></label>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class='signin_text' bindtap='tapRule'>
+          <view style='color:red;float:left'>查看领取规则</view>
+          <view class='signin_img'>
+            <image src='/images/botton_more_red@3x.png'></image>
+          </view>
+
+        </view>
+        <view class='signin_textHint' style='width:370rpx' hidden='{{shareLevel >= 5}}'>再多分享
+          <text>{{totalDays == 2 ? '2' : 1}}</text> 人，就可以提前
+          <text>1</text> 天领面膜哦
+        </view>
+        <view class='signin_textHint' style='width:510rpx' hidden='{{shareLevel != 5}}'>再多分享
+                    <text>{{shareLv1Count >= 5 ? 25-shareLv2Count: 5-shareLv1Count}}</text>  {{shareLv1Count >= 5 ? '间接好友' : '直接好友'}}，就可以获得
+          <text>5000</text> 元微整项目
+        </view>
+        <view class='signin_textHint' style='width:535rpx' hidden='{{shareLevel != 6}}'>再多分享就
+                    <text>{{shareLv1Count >= 10 ? 90-shareLv2Count: 10-shareLv1Count}}</text> {{shareLv1Count >= 10 ? '间接好友' : '直接好友'}}，可以领取价值
+          <text>50000</text> 元的整形项目
+        </view>
+        <view class='signin_textHint'  style='width:320rpx' hidden='{{shareLevel < 7}}'> 恭喜您，您已经超越了99%的会员
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 弹出框：分享 -->
+  <view class='mask' hidden="{{dlgType != 1}}" catchtouchmove='true'>
+    <view class="myToast">
+      <text class='myToast_clones' bindtap='tapCloseDlg'>x</text>
+      <text class='myToast_title'>{{ totalDays <= 1 ? '领取成功' :'签到成功' }}</text>
+      <view class='myToast_content' hidden='{{shareLevel < 7}}'>
+        恭喜您，您已经超越了99%的会员
+      </view>
+      <view class='myToast_content' hidden='{{shareLevel != 6}}'>
+        您还差{{10-shareLv1Count > 0 ? 10-shareLv1Count: 90-shareLv2Count }}个{{10-shareLv1Count > 0 ? '直接好友': '间接好友' }}就可以领取价值50000元的整形项目。
+      </view>
+      <view class='myToast_content' hidden='{{shareLevel != 5}}'>
+        您还差{{5-shareLv1Count > 0 ? 5-shareLv1Count: 25-shareLv2Count }}个{{5-shareLv1Count > 0 ? '直接好友': '间接好友' }}就可以领取价值5000元的微整项目。
+      </view>
+      <view class='myToast_content' hidden='{{shareLevel >=5}}'>您现在可享受每{{totalDays}}天领一篇面膜的特权！再分享给{{totalDays == 2 ? '2' : 1}}个朋友就可以享受每{{totalDays-1}}天领一片面膜啦！
+      </view>
+      <view class='myToast_content'>分享给您的好友，让她一起来免费领面膜吧。</view>
+      <button class='myToast_btn' bindtap='toShare'>分享给好友</button>
+      <view class='myToast_buttom'></view>
+    </view>
+  </view>
+  <!-- 弹出框：领取规则 -->
+  <view class='mask' hidden="{{dlgType!=2}}" catchtouchmove='true'>
+    <view class="myBouns">
+      <view class="myBouns_title">领取规则</view>
+      <view class='myBouns_contcen'>
+        <scroll-view scroll-y="true" style="height:360rpx;">
+          <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+        </scroll-view>
+      </view>
+      <view class='myBouns_btn' bindtap='tapCloseDlg'>知道了</view>
+    </view>
+  </view>
+  <floatTab></floatTab>
+</view>

@@ -1,0 +1,182 @@
+page {
+  background-color: #f8f8f8;
+}
+/* button{
+ display:block;
+box-sizing:border-box;
+text-decoration:none;
+-webkit-tap-highlight-color:transparent;
+overflow:hidden;
+background-color:#F8F8F8;
+} */
+.show {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+.person_top {
+  width: 100%;
+  height: 300rpx;
+  position: relative;
+  overflow: hidden;
+}
+
+.person_topimg {
+  width: 100%;
+  height: 385rpx;
+}
+
+.person_topimg image {
+  width: 100%;
+  height: 100%;
+}
+
+.person_topLeft {
+  position: absolute;
+  left: 0rpx;
+  top: 104rpx;
+  height: 120rpx;
+  display: flex;
+}
+
+.person_topheadportrait {
+  width: 110rpx;
+  height: 110rpx;
+  background: #ccc;
+  border-radius: 52px;
+  overflow: hidden;
+  margin-left: 30rpx;
+}
+
+.person_topName {
+  font-size: 26rpx;
+  color: #fff;
+  line-height: 120rpx;
+  margin-left: 30rpx;
+}
+
+.person_topright {
+  width: 223rpx;
+  height: 76rpx;
+  position: absolute;
+  right: 0rpx;
+  top: 144rpx;
+}
+
+.person_topright image {
+  width: 100%;
+  height: 100%;
+}
+
+/* 我的订单 */
+
+.person_orderForm {
+  width: 100%;
+  height: 266rpx;
+  background: #fff;
+  margin-top: 15rpx;
+}
+
+.person_orderFormtop {
+  width: 90%;
+  height: 85rpx;
+  margin-left: 5%;
+  border-bottom: 1px solid #efefef;
+  font-size: 28rpx;
+  line-height: 85rpx;
+}
+
+.orderFormtop_left {
+  float: left;
+}
+
+.orderFormtop_right {
+  float: right;
+}
+
+.person_orderFormbottom {
+  position: relative;
+}
+
+.orderFormbottom_list {
+  width: 82rpx;
+  height: 82rpx;
+  float: left;
+  margin-top: 46rpx;
+  margin-left: 94rpx;
+  position: relative;
+}
+
+.orderFormbottom_list:first-child {
+  margin-left: 60rpx;
+}
+
+.orderFormbottom_num {
+  width: 25rpx;
+  height: 25rpx;
+  color: #fff;
+  background: red;
+  border-radius: 50%;
+  position: absolute;
+  top: -6rpx;
+  left: 48rpx;
+  font-size: 18rpx;
+  text-align: center;
+  line-height: 25rpx;
+}
+
+.list_img {
+  width: 40rpx;
+  height: 40rpx;
+  margin: 0rpx auto;
+}
+
+.list_img image {
+  width: 100%;
+  height: 100%;
+}
+
+.list_text {
+  font-size: 24rpx;
+  color: #666;
+}
+
+.person_mine {
+  width: 100%;
+  min-height: 270rpx;
+  background: #fff;
+  margin-top: 15rpx;
+  border-bottom: 1px solid #efefef;
+}
+
+.person_mineList {
+  width: 90%;
+  height: 89rpx;
+  margin-left: 5%;
+  border-bottom: 1px solid #efefef;
+  display: flex;
+  align-items: center;
+}
+
+.person_mineList:last-child {
+  border: 0;
+}
+
+.mineList_img {
+  width: 40rpx;
+  height: 31rpx;
+  margin-left: 10rpx;
+  margin-bottom: 21rpx;
+}
+
+.mineList_img image {
+  width: 100%;
+  height: 100%;
+}
+
+.mineList_text {
+  font-size: 26rpx;
+  margin-left: 20rpx;
+}

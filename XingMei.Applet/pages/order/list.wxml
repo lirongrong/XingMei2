@@ -1,0 +1,39 @@
+<!--pages/order/order.wxml-->
+<view class='order'>
+  <view class="order_navbar">
+    <view class="item {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">全部</view>
+    <view class="item {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab">待付款</view>
+    <view class="item {{currentTab==2?'active':''}}" data-current="2" bindtap="clickTab">待发货</view>
+    <view class="item {{currentTab==3?'active':''}}" data-current="3" bindtap="clickTab">已发货</view>
+    <view class="item {{currentTab==4?'active':''}}" data-current="4" bindtap="clickTab">已完成</view>
+  </view>
+  <view  wx:if="{{list.length>0}}">
+    <view class='allCommodity' wx:for="{{list}}" wx:key="key" catchtap="toOrderDetail" data-id="{{item.name}}">
+      <view class='allCommodity_title'>
+        <text class='allCommodity_titleLeft'>{{'订单号：' + item.name}}</text>
+        <text class='allCommodity_titleright'>{{item.statusName}}</text>
+      </view>
+      <view class='allCommodity_content' wx:for="{{item.productList}}" wx:key="key">
+        <view class='allCommodity_contentLeft'>
+          <image src="{{item.image}}"></image>
+        </view>
+        <view class='allCommodity_contentright'>
+          <text class='contentright_title' decode="{{true}}">{{item.name}}</text>
+          <view class='contentright_hint'> </view>
+          <view class='contentright_price'>
+            <text class='contentright_priceTotal'>￥{{item.price}}</text>
+            <text class='contentright_priceNum'>x{{item.count}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view wx:else>
+    <view class='nothave'>
+      <view class='nothave_img'>
+        <image src='/images/smiling.png'></image>
+      </view>
+      <text class='nothave_text'>暂无订单</text>
+    </view>
+  </view>
+</view>

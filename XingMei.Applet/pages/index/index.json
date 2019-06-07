@@ -1,0 +1,6 @@
+{
+    "usingComponents": {
+        "floatTab": "../../component/floatTab/index"
+    },
+    "backgroundColor": "#f8f8f8"
+}
